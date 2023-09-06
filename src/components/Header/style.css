@@ -1,0 +1,141 @@
+.header {
+  width: 100%;
+  position: sticky;
+  z-index: 1000 !important;
+  top: 0;
+  left: 0;
+  padding: 1.1rem 0 1.2rem;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(40px);
+}
+
+.header.scrolled {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 4rem;
+  /* border: 1px solid #d9d9d9; */
+  transition: border-radius 0.3s ease; /* Adjust the transition properties as needed */
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  top: 0.5rem;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sitelogo img {
+  height: 4.2rem;
+  width: auto;
+}
+
+.sitenav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.7rem;
+}
+
+.sitenav__item {
+  text-align: center;
+}
+
+.sitenav__link {
+  color: #000000;
+  line-height: normal;
+  transition: all 0.2s ease;
+}
+
+.sitenav__link:hover {
+  color: #ff9c00;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 2.3rem;
+}
+
+/* MOBILE SITENAV */
+.header-mobile {
+  transform: translate(100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 8rem;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  padding: 1rem 1.5rem 2rem 0;
+  background: rgba(255, 255, 255, 0.932);
+  backdrop-filter: blur(20px);
+  border-bottom: 3px solid #ff9c00;
+  transition: all 0.3s ease;
+}
+
+.header-mobile.active {
+  transform: translate(0);
+}
+
+.sitenav-mobile .sitenav__item {
+  position: relative;
+  text-align: end;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #ebebeb; */
+}
+
+.sitenav-mobile .sitenav__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  transition: all 0.5s ease;
+}
+
+.sitenav-mobile__list {
+  margin-bottom: 4rem;
+}
+
+.header-mobile__btn {
+  align-self: flex-end;
+}
+
+/* .sitenav-mobile .sitenav__item:last-child {
+    border: none;
+} */
+
+/* RESPONSIVE */
+@media screen and (max-width: 730px) {
+  .sitenav__list {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .sitenav {
+    display: none;
+  }
+
+  .header__btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .header-mobile {
+    width: 100%;
+  }
+}
