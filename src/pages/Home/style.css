@@ -1,80 +1,11 @@
-.hero {
-  padding: 2.5rem 0;
-}
-
-.hero__content {
-  padding: 14.3rem 9.4rem 14.4rem;
-  background-image: url("../../assets/static/hero.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 1.5rem;
-}
-
-.hero__info {
-  width: 38.8rem;
-}
-
-.hero__title {
-  font-family: "Inter";
-  font-size: 3.6rem;
-  font-weight: 400;
-  line-height: normal;
-  color: #000000;
-  margin-bottom: 3rem;
-}
-
-.hero__title span {
-  color: #ff9c00;
-}
-
-.hero__form label {
-  display: flex;
-  justify-content: space-between;
-  width: 35.6rem;
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-}
-
-.hero__form input {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-family: "Inter";
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.hero__form input::placeholder {
-  color: #ffffff;
-  font-family: "Inter";
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.hero__btn {
-  cursor: pointer;
-  padding: 0.9rem 2rem;
-  background-color: #ff9c00;
-  color: #fff;
-  border: 1px solid transparent;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-}
-
-.hero__btn:hover {
-  background-color: #db8803;
-}
-
 /* SUGGESTION */
 .suggest {
   padding: 3rem 0 2rem;
+}
+
+.suggest__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .suggest__title,
@@ -93,7 +24,26 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 2rem 1.7rem;
+  gap: 3rem 1.7rem;
+  margin-bottom: 5rem;
+}
+
+.suggest__link {
+  align-self: center;
+  color: #ff9c00;
+  font-size: 16px;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.suggest__link svg {
+  transition: all 0.3s ease;
+}
+
+.suggest__link:hover svg {
+  transform: translate(0.3rem);
 }
 
 /* BRANDS */
@@ -165,6 +115,14 @@
   font-family: "Inter-Medium";
   font-size: 1.4rem;
   line-height: normal;
+}
+
+/* POSTER */
+.poster {
+  padding: 2rem 0 5rem;
+}
+.poster__container img {
+  border-radius: 1.5rem;
 }
 
 /* RESPONSIVE */
