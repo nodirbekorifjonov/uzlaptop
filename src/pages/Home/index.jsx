@@ -2,6 +2,9 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
+// data
+import data from "../../assets/data/data.json";
+
 // react-icons
 import { SiAcer } from "react-icons/si";
 import { FiShoppingBag } from "react-icons/fi";
@@ -23,66 +26,24 @@ const Home = () => {
         <div className="suggest__container container">
           <h3 className="suggest__title">Siz uchun eng yaxshi takliflar!</h3>
           <div className="suggest__cards">
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
+            {data.slice(0, 4).map((item) => {
+              return (
+                <div key={item.id} className="card">
+                  <div className="card__img">
+                    <img src={siteLogo} alt="" width={80} />
+                  </div>
+                  <h3 className="card__name">
+                    {item.productName + item.screen}
+                  </h3>
+                  <div className="price-shop">
+                    <p className="card__price">{item.price}$</p>
+                    <Link to="" className="site-btn">
+                      Batafsil
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -173,126 +134,24 @@ const Home = () => {
         <div className="suggest__container container">
           <h3 className="suggest__title">Eng mashhur mahsulotlar!</h3>
           <div className="suggest__cards">
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
-            <div className="card">
-              <div className="card__img">
-                <img src={siteLogo} alt="" width={80} />
-              </div>
-              <h3 className="card__name">Product Name</h3>
-              <p className="card__price">RS.100,000.00</p>
-              <p className="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, debitis fuga adipisci ipsa asperiores quisquam
-                pariatur doloribus quo ratione porro.
-              </p>
-              <Link to="" className="site-btn">
-                Batafsil
-              </Link>
-            </div>
+            {data.slice(0, 8).map((item) => {
+              return (
+                <div key={item.id} className="card">
+                  <div className="card__img">
+                    <img src={siteLogo} alt="" width={80} />
+                  </div>
+                  <h3 className="card__name">
+                    {item.productName + item.screen}
+                  </h3>
+                  <div className="price-shop">
+                    <p className="card__price">{item.price}$</p>
+                    <Link to="" className="site-btn">
+                      Batafsil
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <Link to="/shop" className="suggest__link">
             <span>Barcha mahsulotlar</span> <BsArrowRight />

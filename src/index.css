@@ -60,7 +60,9 @@ main {
 
 /* CARD */
 .card {
+  position: relative;
   width: 26.2rem;
+  height: 37rem;
   border-radius: 10px;
 }
 
@@ -90,25 +92,42 @@ main {
   transform: scale(1.2);
 }
 
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card__name {
-  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: normal;
-  margin-bottom: 0.5rem;
+  margin-bottom: auto;
+}
+
+.price-shop {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card__price {
   font-size: 16px;
+  font-family: "Inter-Medium";
   line-height: normal;
-  margin-bottom: 2rem;
 }
 
-.card__info {
+/* .card__info {
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
   text-align: justify;
   margin-bottom: 2.5rem;
-}
+} */
 
 /* RESPONSIVE */
 @media screen and (max-width: 730px) {
