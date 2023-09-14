@@ -1,7 +1,7 @@
 .footer {
-  background-color: #393434;
+  background-color: #232327;
   padding: 2.5rem 0 10.7rem;
-  color: #ff9c00;
+  color: #005fcb;
 }
 
 .footer__container {
@@ -22,7 +22,7 @@
 }
 
 .footer__logo {
-  color: #ff9c00;
+  color: #005fcb;
   font-size: 1.8rem;
 }
 

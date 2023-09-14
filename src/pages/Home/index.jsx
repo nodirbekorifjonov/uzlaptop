@@ -82,7 +82,7 @@ const Home = () => {
           <h2 className="brands__title">Brendlar orqali tanlang</h2>
           <div className="brands__cards">
             {uniqueBrandNames.map((brand, index) => (
-              <Link to="/shop" className="brands__card">
+              <Link key={index} to="/shop" className="brands__card">
                 <div className="brands__card-img">
                   <FiShoppingBag />
                 </div>

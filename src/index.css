@@ -29,6 +29,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.21;
   color: #000000;
+  padding-top: 5.8rem;
 }
 
 .container {
@@ -45,7 +46,7 @@ main {
 .site-btn {
   cursor: pointer;
   padding: 0.9rem 2rem;
-  background-color: #ff9c00;
+  background-color: #005fcb;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 100px;
@@ -53,9 +54,9 @@ main {
 }
 
 .site-btn:hover {
-  border-color: #ff9c00;
+  border-color: #005fcb;
   background-color: transparent;
-  color: #ff9c00;
+  color: #005fcb;
 }
 
 /* CARD */

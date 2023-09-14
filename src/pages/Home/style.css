@@ -30,7 +30,7 @@
 
 .suggest__link {
   align-self: center;
-  color: #ff9c00;
+  color: #005fcb;
   font-size: 16px;
   line-height: normal;
   display: flex;
@@ -75,7 +75,7 @@
   width: 0;
   height: 100%;
   position: absolute;
-  background-color: #ff9c00;
+  background-color: #005fcb;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   right: 0;
@@ -102,7 +102,7 @@
 
 .brands__card-img svg path,
 .brands__card-img svg line {
-  stroke: #ff9c00;
+  stroke: #005fcb;
 }
 
 .brands__card-info h3 {

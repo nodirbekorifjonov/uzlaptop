@@ -24,7 +24,7 @@
 }
 
 .hero__title span {
-  color: #ff9c00;
+  color: #005fcb;
 }
 
 .hero__form label {
@@ -61,7 +61,7 @@
 .hero__btn {
   cursor: pointer;
   padding: 0.9rem 2rem;
-  background-color: #ff9c00;
+  background-color: #005fcb;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 100px;
@@ -69,5 +69,5 @@
 }
 
 .hero__btn:hover {
-  background-color: #db8803;
+  background-color: #0166dafd;
 }

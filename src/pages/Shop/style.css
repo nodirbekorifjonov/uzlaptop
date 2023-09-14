@@ -29,7 +29,7 @@
 .products button {
   cursor: pointer;
   padding: 0.4rem 1.1rem;
-  border: 1px solid #ff9c00;
+  border: 1px solid #005fcb;
   background-color: transparent;
   border-radius: 5px;
   color: #000;
@@ -43,7 +43,7 @@
 
 .products button:hover {
   border-color: transparent;
-  background-color: #ff9c00;
+  background-color: #005fcb;
   color: #fff;
 }
 
@@ -71,7 +71,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 8px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000;
-  background: #ff9c00;
+  background: #005fcb;
   border-radius: 13px;
   border: 0px solid #000000;
 }
@@ -81,20 +81,20 @@ input[type="range"]::-webkit-slider-thumb {
   height: 10px;
   width: 10px;
   border-radius: 47px;
-  background: #ff9c00;
+  background: #005fcb;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -2px;
 }
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ff9c00;
+  background: #005fcb;
 }
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000;
-  background: #ff9c00;
+  background: #005fcb;
   border-radius: 13px;
   border: 0px solid #000000;
 }
@@ -104,7 +104,7 @@ input[type="range"]::-moz-range-thumb {
   height: 10px;
   width: 10px;
   border-radius: 47px;
-  background: #ff9c00;
+  background: #005fcb;
   cursor: pointer;
 }
 input[type="range"]::-ms-track {
@@ -116,13 +116,13 @@ input[type="range"]::-ms-track {
   color: transparent;
 }
 input[type="range"]::-ms-fill-lower {
-  background: #ff9c00;
+  background: #005fcb;
   border: 0px solid #000000;
   border-radius: 26px;
   box-shadow: 0px 0px 0px #000000;
 }
 input[type="range"]::-ms-fill-upper {
-  background: #ff9c00;
+  background: #005fcb;
   border: 0px solid #000000;
   border-radius: 26px;
   box-shadow: 0px 0px 0px #000000;
@@ -133,14 +133,14 @@ input[type="range"]::-ms-thumb {
   height: 10px;
   width: 10px;
   border-radius: 47px;
-  background: #ff9c00;
+  background: #005fcb;
   cursor: pointer;
 }
 input[type="range"]:focus::-ms-fill-lower {
-  background: #ff9c00;
+  background: #005fcb;
 }
 input[type="range"]:focus::-ms-fill-upper {
-  background: #ff9c00;
+  background: #005fcb;
 }
 
 .filter p {
