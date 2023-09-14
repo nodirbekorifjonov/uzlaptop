@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+// react-icons
+import { BiSearch } from "react-icons/bi";
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -14,7 +17,7 @@ const Hero = () => {
               <label>
                 <input type="text" placeholder="Bu yerda mahsulotni qidiring" />
                 <button type="submit" className="hero__btn">
-                  Qidirish
+                  <BiSearch />
                 </button>
               </label>
             </form>

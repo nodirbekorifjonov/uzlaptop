@@ -59,9 +59,13 @@
 }
 
 .hero__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  padding: 0.9rem 2rem;
+  padding: 1rem 1.5rem;
   background-color: #005fcb;
+  font-size: 1.8rem;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 100px;

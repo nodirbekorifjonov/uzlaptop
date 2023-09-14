@@ -18,6 +18,7 @@ header {
 .header__title {
   display: none;
   color: #005fcb;
+  user-select: none;
 }
 
 .header.scrolled {
