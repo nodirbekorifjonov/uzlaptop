@@ -30,7 +30,7 @@
 .hero__form label {
   display: flex;
   justify-content: space-between;
-  width: 35.6rem;
+  max-width: 35.6rem;
   padding: 0.5rem 0.5rem 0.5rem 2rem;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100px;
