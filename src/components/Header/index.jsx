@@ -44,6 +44,8 @@ const Header = () => {
             <Link to="/" className="sitelogo">
               <img src={logo} alt="" width={65} />
             </Link>
+            <h2 className="header__title">UZLAPTOP</h2>
+
             {/* NAVBAR */}
             <nav className="sitenav">
               <ul className="sitenav__list">
