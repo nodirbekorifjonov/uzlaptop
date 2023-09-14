@@ -1,0 +1,29 @@
+.news {
+  padding: 2rem 0;
+}
+
+.news__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.news__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.news__container h2 {
+  color: #000;
+  font-family: "Inter-Medium";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.news__cards img {
+  border-radius: 10px;
+}

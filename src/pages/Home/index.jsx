@@ -16,6 +16,25 @@ import posterImg from "../../assets/static/footer-top.png";
 import Hero from "../../components/Hero";
 
 const Home = () => {
+  const findUniqueBrandNames = () => {
+    const brandNamesSet = new Set();
+    // Iterate through the data and add brand names to the set
+    data.forEach((item) => {
+      if (item.brand) {
+        brandNamesSet.add(item.brand);
+      }
+    });
+
+    // Convert the set to an array to get unique brand names
+    const uniqueBrandNames = Array.from(brandNamesSet);
+
+    // Get the count of unique brand names
+    const brandCount = uniqueBrandNames.length;
+
+    return { uniqueBrandNames, brandCount };
+  };
+
+  const { uniqueBrandNames, brandCount } = findUniqueBrandNames();
   return (
     <>
       {/* HERO SECTION */}
@@ -32,14 +51,23 @@ const Home = () => {
                   <div className="card__img">
                     <img src={siteLogo} alt="" width={80} />
                   </div>
-                  <h3 className="card__name">
-                    {item.productName + item.screen}
-                  </h3>
-                  <div className="price-shop">
-                    <p className="card__price">{item.price}$</p>
-                    <Link to="" className="site-btn">
-                      Batafsil
-                    </Link>
+                  <div className="card__info">
+                    <h3 className="card__name">
+                      {item.productName + item.screen}
+                    </h3>
+                    <p>
+                      <span>CPU:</span> {item.cpu}
+                    </p>
+                    <p>
+                      <span>RAM:</span> {item.ram}
+                    </p>
+                    <p>
+                      <span>Xotira:</span> {item.storage}
+                    </p>
+                    <div className="price-shop">
+                      <span>Narx:</span>
+                      <p className="card__price">{item.price}$</p>
+                    </div>
                   </div>
                 </div>
               );
@@ -53,78 +81,17 @@ const Home = () => {
         <div className="brands__container container">
           <h2 className="brands__title">Brendlar orqali tanlang</h2>
           <div className="brands__cards">
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
-            <Link to="" className="brands__card">
-              <div className="brands__card-img">
-                <FiShoppingBag />
-              </div>
-              <div className="brands__card-info">
-                <h3>Shop Name</h3>
-                <p>24 Products</p>
-              </div>
-            </Link>
+            {uniqueBrandNames.map((brand, index) => (
+              <Link to="/shop" className="brands__card">
+                <div className="brands__card-img">
+                  <FiShoppingBag />
+                </div>
+                <div className="brands__card-info">
+                  <h3>{brand}</h3>
+                  <p>{index + 1} ta mahsulot</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -140,14 +107,23 @@ const Home = () => {
                   <div className="card__img">
                     <img src={siteLogo} alt="" width={80} />
                   </div>
-                  <h3 className="card__name">
-                    {item.productName + item.screen}
-                  </h3>
-                  <div className="price-shop">
-                    <p className="card__price">{item.price}$</p>
-                    <Link to="" className="site-btn">
-                      Batafsil
-                    </Link>
+                  <div className="card__info">
+                    <h3 className="card__name">
+                      {item.productName + item.screen}
+                    </h3>
+                    <p>
+                      <span>CPU:</span> {item.cpu}
+                    </p>
+                    <p>
+                      <span>RAM:</span> {item.ram}
+                    </p>
+                    <p>
+                      <span>Xotira:</span> {item.storage}
+                    </p>
+                    <div className="price-shop">
+                      <span>Narx:</span>
+                      <p className="card__price">{item.price}$</p>
+                    </div>
                   </div>
                 </div>
               );

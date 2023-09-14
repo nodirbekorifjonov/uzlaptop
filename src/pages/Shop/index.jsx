@@ -97,14 +97,23 @@ const Shop = () => {
                   <div className="card__img">
                     <img src={siteLogo} alt="" width={80} />
                   </div>
-                  <h3 className="card__name">
-                    {item.productName + item.screen}
-                  </h3>
-                  <div className="price-shop">
-                    <p className="card__price">{item.price}$</p>
-                    <Link to="" className="site-btn">
-                      Batafsil
-                    </Link>
+                  <div className="card__info">
+                    <h3 className="card__name">
+                      {item.productName + item.screen}
+                    </h3>
+                    <p>
+                      <span>CPU:</span> {item.cpu}
+                    </p>
+                    <p>
+                      <span>RAM:</span> {item.ram}
+                    </p>
+                    <p>
+                      <span>Xotira:</span> {item.storage}
+                    </p>
+                    <div className="price-shop">
+                      <span>Narx:</span>
+                      <p className="card__price">{item.price}$</p>
+                    </div>
                   </div>
                 </div>
               );
