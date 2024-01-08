@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "react": "^18.2.0",
     "react-bootstrap-range-slider": "^3.0.8",
     "react-dom": "^18.2.0",

@@ -14,9 +14,12 @@
   width: 22.1rem;
   height: 40%;
   flex-shrink: 0;
-  border-radius: 15px;
+  border: 1px solid rgba(114, 114, 114, 0.212);
+  border-top: 8px solid #005fcb;
+  border-bottom: 8px solid #005fcb;
+  border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25); */
 }
 
 .filter__hero {

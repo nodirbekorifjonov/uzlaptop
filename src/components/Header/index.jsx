@@ -64,11 +64,6 @@ const Header = () => {
                     Yangiliklar
                   </Link>
                 </li>
-                <li className="sitenav__item">
-                  <Link to="/contact" className="sitenav__link">
-                    Bog'lanish
-                  </Link>
-                </li>
               </ul>
             </nav>
 
@@ -107,7 +102,7 @@ const Header = () => {
                 target="_blank"
                 className="header-mobile__btn site-btn"
               >
-                VCARD
+                Bog'lanish
               </Link>
             </div>
 
@@ -118,7 +113,7 @@ const Header = () => {
                 target="_blank"
                 className="header__btn site-btn"
               >
-                VCARD
+                Bog'lanish
               </Link>
 
               <button className="hamburger" onClick={handleBurger}>

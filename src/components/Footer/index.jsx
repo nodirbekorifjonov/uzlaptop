@@ -32,11 +32,6 @@ const Footer = () => {
               Yangiliklar
             </Link>
           </li>
-          <li className="footer__item footer__item-hover">
-            <Link to="/contact" className="footer__link">
-              Bog'lanish
-            </Link>
-          </li>
         </ul>
         <ul className="footer__list">
           <li className="footer__item">Kategoriyalar</li>
@@ -76,7 +71,7 @@ const Footer = () => {
             target="_blank"
             className="footer-vcard site-btn"
           >
-            VCARD
+            Bog'lanish
           </Link>
         </ul>
       </div>

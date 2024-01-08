@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import Hero from "../../components/Hero";
 
-import siteLogo from "../../assets/static/logo.png";
+import macbook from "../../assets/static/macbook.png";
 import { Link } from "react-router-dom";
 
 // react-icons
@@ -93,29 +93,19 @@ const Shop = () => {
           <div className="cards__container">
             {filteredData.map((item) => {
               return (
-                <div key={item.id} className="card">
-                  <div className="card__img">
-                    <img src={siteLogo} alt="" width={80} />
+                <Link to={`/shop/${item.id}`} key={item.id} className="card">
+                  <div className="imgBox">
+                    <img src={macbook} alt="" className="mouse" />
                   </div>
-                  <div className="card__info">
-                    <h3 className="card__name">
-                      {item.productName + item.screen}
-                    </h3>
-                    <p>
-                      <span>CPU:</span> {item.cpu}
-                    </p>
-                    <p>
-                      <span>RAM:</span> {item.ram}
-                    </p>
-                    <p>
-                      <span>Xotira:</span> {item.storage}
-                    </p>
-                    <div className="price-shop">
-                      <span>Narx:</span>
-                      <p className="card__price">{item.price}$</p>
-                    </div>
+
+                  <div className="contentBox">
+                    <h3>{item.productName + item.screen}</h3>
+                    <h2 className="price">{item.price}$</h2>
+                    <a href="#" className="buy">
+                      Batafsil
+                    </a>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

@@ -12,6 +12,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 // images
 import siteLogo from "../../assets/static/logo.png";
+import macbook from "../../assets/static/macbook.png";
 import posterImg from "../../assets/static/footer-top.png";
 import Hero from "../../components/Hero";
 
@@ -45,31 +46,21 @@ const Home = () => {
         <div className="suggest__container container">
           <h3 className="suggest__title">Siz uchun eng yaxshi takliflar!</h3>
           <div className="suggest__cards">
-            {data.slice(0, 4).map((item) => {
+            {data.slice(0, 6).map((item) => {
               return (
-                <div key={item.id} className="card">
-                  <div className="card__img">
-                    <img src={siteLogo} alt="" width={80} />
+                <Link to="/" key={item.id} className="card">
+                  <div className="imgBox">
+                    <img src={macbook} alt="" className="mouse" />
                   </div>
-                  <div className="card__info">
-                    <h3 className="card__name">
-                      {item.productName + item.screen}
-                    </h3>
-                    <p>
-                      <span>CPU:</span> {item.cpu}
-                    </p>
-                    <p>
-                      <span>RAM:</span> {item.ram}
-                    </p>
-                    <p>
-                      <span>Xotira:</span> {item.storage}
-                    </p>
-                    <div className="price-shop">
-                      <span>Narx:</span>
-                      <p className="card__price">{item.price}$</p>
-                    </div>
+
+                  <div className="contentBox">
+                    <h3>{item.productName + item.screen}</h3>
+                    <h2 className="price">{item.price}$</h2>
+                    <a href="#" className="buy">
+                      Batafsil
+                    </a>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -103,33 +94,23 @@ const Home = () => {
           <div className="suggest__cards">
             {data.slice(0, 8).map((item) => {
               return (
-                <div key={item.id} className="card">
-                  <div className="card__img">
-                    <img src={siteLogo} alt="" width={80} />
+                <Link to="/" key={item.id} className="card">
+                  <div className="imgBox">
+                    <img src={macbook} alt="" className="mouse" />
                   </div>
-                  <div className="card__info">
-                    <h3 className="card__name">
-                      {item.productName + item.screen}
-                    </h3>
-                    <p>
-                      <span>CPU:</span> {item.cpu}
-                    </p>
-                    <p>
-                      <span>RAM:</span> {item.ram}
-                    </p>
-                    <p>
-                      <span>Xotira:</span> {item.storage}
-                    </p>
-                    <div className="price-shop">
-                      <span>Narx:</span>
-                      <p className="card__price">{item.price}$</p>
-                    </div>
+
+                  <div className="contentBox">
+                    <h3>{item.productName + item.screen}</h3>
+                    <h2 className="price">{item.price}$</h2>
+                    <a href="#" className="buy">
+                      Batafsil
+                    </a>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
-          <Link to="/shop" className="suggest__link">
+          <Link to="shop" className="suggest__link">
             <span>Barcha mahsulotlar</span> <BsArrowRight />
           </Link>
         </div>
