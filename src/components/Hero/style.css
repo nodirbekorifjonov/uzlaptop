@@ -11,7 +11,8 @@
   background-image: url("../../assets/static/hero.png");
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 1.5rem;
+  background-size: contain;
+  border-radius: 1.5rem !important;
 }
 
 .hero__info {

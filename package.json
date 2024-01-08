@@ -10,12 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "react": "^18.2.0",
-    "react-bootstrap-range-slider": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

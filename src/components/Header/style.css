@@ -19,6 +19,8 @@ header {
   display: none;
   color: #005fcb;
   user-select: none;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .header.scrolled {
@@ -44,15 +46,23 @@ header {
   width: auto;
 }
 
+.sitenav {
+  display: flex !important;
+  align-items: center;
+}
+
 .sitenav__list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5.7rem;
+  margin: 0 !important;
+  padding: 0;
 }
 
 .sitenav__item {
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .sitenav__link {
@@ -149,7 +159,7 @@ header {
 
 @media screen and (max-width: 620px) {
   .sitenav {
-    display: none;
+    display: none !important;
   }
 
   .header__btn {

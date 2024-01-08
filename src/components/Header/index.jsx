@@ -44,7 +44,9 @@ const Header = () => {
             <Link to="/" className="sitelogo">
               <img src={logo} alt="" width={65} />
             </Link>
-            <h2 className="header__title">UZLAPTOP</h2>
+            <Link to="/" className="header__title">
+              UZLAPTOP
+            </Link>
 
             {/* NAVBAR */}
             <nav className="sitenav">
@@ -98,7 +100,7 @@ const Header = () => {
               </nav>
 
               <Link
-                to="https://abduganiqodirov.netlify.app/"
+                to="https://vcarduz.netlify.app/vcard/1"
                 target="_blank"
                 className="header-mobile__btn site-btn"
               >
@@ -109,7 +111,7 @@ const Header = () => {
             {/* BUTTONS */}
             <div className="header__btns">
               <Link
-                to="https://abduganiqodirov.netlify.app/"
+                to="https://vcarduz.netlify.app/vcard/1"
                 target="_blank"
                 className="header__btn site-btn"
               >

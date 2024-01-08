@@ -48,7 +48,7 @@ const Home = () => {
           <div className="suggest__cards">
             {data.slice(0, 6).map((item) => {
               return (
-                <Link to="/" key={item.id} className="card">
+                <Link to={`/shop/${item.id}`} key={item.id} className="card">
                   <div className="imgBox">
                     <img src={macbook} alt="" className="mouse" />
                   </div>
@@ -56,9 +56,7 @@ const Home = () => {
                   <div className="contentBox">
                     <h3>{item.productName + item.screen}</h3>
                     <h2 className="price">{item.price}$</h2>
-                    <a href="#" className="buy">
-                      Batafsil
-                    </a>
+                    <span className="buy">Batafsil</span>
                   </div>
                 </Link>
               );
@@ -92,7 +90,7 @@ const Home = () => {
         <div className="suggest__container container">
           <h3 className="suggest__title">Eng mashhur mahsulotlar!</h3>
           <div className="suggest__cards">
-            {data.slice(0, 8).map((item) => {
+            {data.slice(0, 6).map((item) => {
               return (
                 <Link to="/" key={item.id} className="card">
                   <div className="imgBox">
@@ -102,9 +100,7 @@ const Home = () => {
                   <div className="contentBox">
                     <h3>{item.productName + item.screen}</h3>
                     <h2 className="price">{item.price}$</h2>
-                    <a href="#" className="buy">
-                      Batafsil
-                    </a>
+                    <span className="buy">Batafsil</span>
                   </div>
                 </Link>
               );

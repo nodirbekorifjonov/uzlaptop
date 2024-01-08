@@ -66,11 +66,31 @@
 }
 
 @media screen and (max-width: 606px) {
-  .footer__container {
+  /* .footer__container {
     align-items: center;
-  }
+  } */
 
   .footer__list {
     max-width: 13rem;
+  }
+}
+
+@media screen and (max-width: 733px) {
+  .footer__first {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .footer__list {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-vcard {
+    align-self: auto;
   }
 }

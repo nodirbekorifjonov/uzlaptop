@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
 // styles
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+// react icons
+import { SlScreenDesktop } from "react-icons/sl";
+
+// import required modules
+import { EffectCards } from "swiper/modules";
 
 // data
 import data from "../../../assets/data/data.json";
@@ -20,103 +31,68 @@ const ShopDetails = () => {
     setResult(foundItem);
   }, [id]);
 
-  console.log("ID:", id);
-  console.log("Selected Item:", result);
-
   return (
-    <div>
-      <div class="container bootdey">
-        <div class="col-md-12">
-          <section class="panel">
-            <div class="panel-body">
-              <div class="panel-body col-md-6">
-                <div class="pro-img-details">
-                  <img src={macbook} alt="" />
-                </div>
-                <div class="pro-img-list">
-                  <a href="#/">
-                    <img src={macbook} alt="" />
-                  </a>
-                  <a href="#/">
-                    <img src={macbook} alt="" />
-                  </a>
-                  <a href="#/">
-                    <img src={macbook} alt="" />
-                  </a>
-                  <a href="#/">
-                    <img src={macbook} alt="" />
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <h4 class="pro-d-title">
-                  <a href="#/" class="">
-                    Leopard Shirt Dress
-                  </a>
-                </h4>
-                <p>
-                  Praesent ac condimentum felis. Nulla at nisl orci, at
-                  dignissim dolor, The best product descriptions address your
-                  ideal buyer directly and personally. The best product
-                  descriptions address your ideal buyer directly and personally.
-                </p>
-                <div class="product_meta">
-                  <span class="posted_in">
-                    {" "}
-                    <strong>Categories:</strong>{" "}
-                    <a rel="tag" href="#/">
-                      Jackets
-                    </a>
-                    ,{" "}
-                    <a rel="tag" href="#/">
-                      Men
-                    </a>
-                    ,{" "}
-                    <a rel="tag" href="#/">
-                      Shirts
-                    </a>
-                    ,{" "}
-                    <a rel="tag" href="#/">
-                      T-shirt
-                    </a>
-                    .
-                  </span>
-                  <span class="tagged_as">
-                    <strong>Tags:</strong>{" "}
-                    <a rel="tag" href="#/">
-                      mens
-                    </a>
-                    ,{" "}
-                    <a rel="tag" href="#/">
-                      womens
-                    </a>
-                    .
-                  </span>
-                </div>
-                <div class="m-bot15">
-                  {" "}
-                  <strong>Price : </strong> <span class="amount-old">$544</span>{" "}
-                  <span class="pro-price"> $300.00</span>
-                </div>
-                <div class="form-group">
-                  <label>Quantity</label>
-                  <input
-                    type="quantiy"
-                    placeholder="1"
-                    class="form-control quantity"
-                  />
-                </div>
-                <p>
-                  <button class="btn btn-round btn-danger" type="button">
-                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                  </button>
-                </p>
-              </div>
-            </div>
-          </section>
+    <section className="details">
+      <div className="details-container container">
+        <div className="details__img">
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={macbook} alt="" className="sliderImage" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={macbook} alt="" className="sliderImage" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={macbook} alt="" className="sliderImage" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={macbook} alt="" className="sliderImage" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={macbook} alt="" className="sliderImage" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="details__info">
+          <h3 className="details__title">{result.productName}</h3>
+          <p className="details__description">{result.description}</p>
+          <span className="details__line"></span>
+          <ul className="details__list">
+            <li className="details__item">
+              <span>Ekran: </span>
+              {result.screen}
+            </li>
+            <li className="details__item">
+              <span>CPU: </span>
+              {result.cpu}
+            </li>
+            <li className="details__item">
+              <span>Ram: </span>
+              {result.ram}
+            </li>
+            <li className="details__item">
+              <span>Хотира: </span>
+              {result.storage}
+            </li>
+            {/* <li className="details__item">
+              <span>Ekran: </span>
+              {result.screen}
+            </li> */}
+          </ul>
+          <div className="details__allprices">
+            {/* {result.oldPrice && (
+              <span className="details__old-price">{result.oldPrice}</span>
+            )} */}
+            <h3 className="details__price">${result.price}</h3>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

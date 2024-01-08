@@ -67,7 +67,7 @@ const Footer = () => {
             <Link to="tel:+998971283333">+998971283333</Link>
           </li>
           <Link
-            to="https://abduganiqodirov.netlify.app/"
+            to="https://vcarduz.netlify.app/vcard/1"
             target="_blank"
             className="footer-vcard site-btn"
           >

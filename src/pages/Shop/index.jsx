@@ -101,9 +101,7 @@ const Shop = () => {
                   <div className="contentBox">
                     <h3>{item.productName + item.screen}</h3>
                     <h2 className="price">{item.price}$</h2>
-                    <a href="#" className="buy">
-                      Batafsil
-                    </a>
+                    <span className="buy">Batafsil</span>
                   </div>
                 </Link>
               );
