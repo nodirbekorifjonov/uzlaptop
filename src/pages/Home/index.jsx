@@ -92,7 +92,7 @@ const Home = () => {
           <div className="suggest__cards">
             {data.slice(0, 6).map((item) => {
               return (
-                <Link to="/" key={item.id} className="card">
+                <Link to={`/shop/${item.id}`} key={item.id} className="card">
                   <div className="imgBox">
                     <img src={macbook} alt="" className="mouse" />
                   </div>

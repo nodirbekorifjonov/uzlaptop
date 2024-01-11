@@ -181,3 +181,9 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 616px) {
+  .hero__content {
+    background-image: url("../../assets/static/hero-mobile.jpg");
+  }
+}
