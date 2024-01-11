@@ -23,8 +23,9 @@
 
 .details__description {
   font-size: 1.6rem;
-  color: #232327;
-  font-style: italic;
+  color: #232327b7;
+  font-weight: 300;
+  /* font-style: italic; */
   margin-bottom: 0.5rem;
 }
 
